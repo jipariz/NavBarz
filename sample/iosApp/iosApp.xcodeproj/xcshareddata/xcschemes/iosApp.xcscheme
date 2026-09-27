@@ -8,7 +8,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CCF0DA6724202F624996943E"
-               BuildableName = "Sidekick.app"
+               BuildableName = "Pokemon.app"
                BlueprintName = "iosApp"
                ReferencedContainer = "container:iosApp.xcodeproj">
             </BuildableReference>
@@ -23,7 +23,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CCF0DA6724202F624996943E"
-            BuildableName = "Sidekick.app"
+            BuildableName = "Pokemon.app"
             BlueprintName = "iosApp"
             ReferencedContainer = "container:iosApp.xcodeproj">
          </BuildableReference>

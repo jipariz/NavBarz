@@ -53,9 +53,13 @@ jobs:
           esac
           echo "Releasing $version."
 
-      # A release is not the place to discover a broken test.
+      # A release is not the place to discover a broken test. Same task as the Build workflow —
+      # `ciVerify`, defined in the root build.gradle.kts — and for the same reason: a root `build`
+      # also produces the sample's distributable artifacts, which nothing consumes and which
+      # exhaust the runner's heap. This step kept the old command after Build moved off it, so the
+      # first tagged release failed here, on the one workflow where the fix mattered most.
       - name: Test
-        run: ./gradlew build allTests --stacktrace --max-workers=4
+        run: ./gradlew ciVerify ktfmtCheck --stacktrace --max-workers=4
 
       - name: Publish to Maven Central
         run: ./gradlew publishAndReleaseToMavenCentral --no-configuration-cache --max-workers=4
