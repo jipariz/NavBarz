@@ -1,9 +1,5 @@
 // The demo's shared KMP library — every app shell in this directory (androidApp, desktopApp,
 // webApp, iosApp) is a thin wrapper around `DemoApp()` from here.
-//
-// Ported from the sidekick repo's Pokédex demo. The debug-overlay SDK, its Gradle plugin, the
-// KSP-generated preferences store and the Room cache have all been stripped: this sample exists
-// to show off NavBarz's navigation, and none of that machinery served that.
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
